@@ -1,0 +1,16 @@
+{
+    "fruits": [
+        {
+            "question": "Translate 'सेब' to English.",
+            "answer": "Apple",
+            "image" : "mango.png"
+        },
+      {
+        "question": "Translate 'केला' to English.",
+        "answer": "Banana",
+        "image": "mango.png",
+        "type": "image"
+      }
+
+    ]
+}

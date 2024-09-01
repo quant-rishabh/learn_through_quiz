@@ -1,0 +1,134 @@
+Detailed Rules for Creating the JSON Data Structure
+When creating JSON files for your quiz application, it's important to follow specific rules and conventions to ensure that the application functions correctly. Below are the detailed rules for structuring your JSON data:
+
+1. General Structure
+Each JSON file represents a different subject or category (e.g., math.json, physics.json).
+Inside each JSON file, topics are represented as keys, with the value being a list of question objects.
+Example:
+
+json
+Copy code
+{
+    "geography": [
+        {
+            "question": "Identify this landmark",
+            "answer": "Eiffel Tower",
+            "image": "eiffel_tower.png",
+            "type": "image"
+        }
+    ],
+    "history": [
+        {
+            "question": "Who was the first President of the United States?",
+            "answer": "George Washington"
+        }
+    ]
+}
+2. Question Object Structure
+Each question object can have the following keys:
+
+question: (Mandatory)
+
+This is the text of the question being asked.
+Example: "question": "Who was the first President of the United States?"
+answer: (Mandatory or Optional depending on type)
+
+This is the expected answer(s) to the question. Multiple correct answers should be separated by a semicolon (;).
+If additional information is provided, it should be separated from the answer(s) by an @ symbol.
+Example: "answer": "George Washington"
+Example with multiple answers: "answer": "Red;Blue;Green"
+Example with additional info: "answer": "Red;Blue;Green@These are primary colors"
+image: (Optional)
+
+This specifies the image file associated with the question.
+The image should be located in the directory structure: images/<data_file>/<topic>/.
+Example: "image": "eiffel_tower.png"
+Note: If the type is image, this key is mandatory.
+type: (Optional)
+
+This specifies the type of question.
+Default: "text"
+If set to "image", the application will show the image associated with the question and then prompt for the answer.
+Example: "type": "image"
+Additional Keys for Multi-Answer Questions: (Optional)
+
+For multi-answer questions (like filling out multiple parts of a DBMS question), each key in the object represents a different part of the question, with the value being the expected answer.
+These keys are used in addition to the question key.
+Example:
+json
+Copy code
+{
+    "question": "DBMS Concepts",
+    "normalization is needed to remove - ": "redundancy;dependency",
+    "referential integrity ensures that...": "consistency",
+    "to improve query performance...": "denormalize"
+}
+3. Folder and File Structure
+JSON Files: All JSON files should be placed in the directory specified in the config.json under learning_section_directory.
+
+Example: learning_section/math.json
+Image Files: Images should be stored in a directory structure that reflects the JSON file and topic.
+
+Directory Structure: images/<data_file>/<topic>/
+Example: images/math/geometry/triangle.png
+Results Directory: The results of the quiz are saved in the directory specified in the config.json under results_directory.
+
+4. Behavior Based on type
+type: "text" (Default):
+
+The application will display the question text and prompt the user to enter the answer.
+type: "image":
+
+The application will display the image specified in the image key and then prompt the user to enter the answer.
+If the image key is missing when type is set to "image", this will result in an error.
+5. Error Handling
+If a required key is missing (like question or answer), the application may fail to process that question correctly.
+If an image is specified but the type is not set to "image", the image will be shown after the question is answered correctly as a reference.
+Ensure that the image paths and names are correct and match the structure defined above.
+6. Practice Attempts
+The practice_attempts key in config.json defines how many times a user has to practice a question if they answer it incorrectly.
+The application will enforce this number of attempts for each incorrect answer.
+7. Result Storage
+Results are stored in JSON files named according to the data file and topic.
+These files are stored in the directory specified under results_directory in config.json.
+8. Special Commands During Quiz
+skip: Typing "skip" as an answer will skip the current question without marking it incorrect or requiring practice.
+9. Example JSON File
+Here’s an example JSON file with multiple topics and different types of questions:
+
+json
+Copy code
+{
+    "geography": [
+        {
+            "question": "Identify this landmark",
+            "answer": "Eiffel Tower",
+            "image": "eiffel_tower.png",
+            "type": "image"
+        },
+        {
+            "question": "What is the capital of France?",
+            "answer": "Paris"
+        }
+    ],
+    "history": [
+        {
+            "question": "Who was the first President of the United States?",
+            "answer": "George Washington"
+        },
+        {
+            "question": "In which year did World War II end?",
+            "answer": "1945"
+        }
+    ],
+    "dbms": [
+        {
+            "question": "based on normalization",
+            "why we need normalization to remove - ": "redundancy;dependency",
+            "referential integrity ensures that...": "consistency",
+            "if we need to improve query performance, reduce complexity, then we can ... the tables": "denormalize"
+        }
+    ]
+}
+Summary
+By following these rules, you ensure that the quiz application will process the data correctly and provide a consistent experience for users. Keep this guide as a reference whenever you create or modify JSON data for your quizzes.

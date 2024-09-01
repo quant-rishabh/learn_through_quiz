@@ -1,0 +1,30 @@
+Quick Rules for JSON Structure
+General Structure:
+
+Each JSON file corresponds to a subject or category (e.g., math.json).
+Inside each file, topics are represented as keys, with a list of question objects as their values.
+Question Object Keys:
+
+question (Mandatory): The text of the question.
+answer (Mandatory or Optional based on type):
+Expected answer(s) separated by ;.
+Additional info after @.
+image (Optional): Path to the image file (mandatory if type is "image").
+type (Optional):
+"text" (default) for standard questions.
+"image" if the question is based on an image.
+Folder Structure:
+
+JSON Files: Store in the directory specified under learning_section_directory in config.json.
+Images: Store in images/<data_file>/<topic>/ structure.
+Behavior:
+
+type: "text": Displays the question and prompts for an answer.
+type: "image": Displays an image and then prompts for an answer.
+Practice and Results:
+
+Incorrect answers lead to practice sessions (based on practice_attempts in config.json).
+Results are stored in the directory specified by results_directory.
+Special Commands:
+
+skip: Skips the current question.

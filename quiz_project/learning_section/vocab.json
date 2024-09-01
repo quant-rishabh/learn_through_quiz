@@ -1,0 +1,54 @@
+{
+    "vocab": [
+        {
+            "question": "नमस्ते",
+            "answer": "Hello"
+        },
+        {
+            "question": "धन्यवाद",
+            "answer": "Thank you"
+        },
+        {
+            "question": "कृपया",
+            "answer": "Please"
+        },
+        {
+            "question": "मुझे",
+            "answer": "I"
+        },
+        {
+            "question": "पानी",
+            "answer": "Water"
+        }
+    ],
+    "sentences": [
+        {
+            "question": "आप कैसे हैं?",
+            "answer": "How are you?"
+        },
+        {
+            "question": "मुझे पानी चाहिए।",
+            "answer": "I need water."
+        },
+        {
+            "question": "क्या समय हुआ है?",
+            "answer": "What time is it?"
+        },
+        {
+            "question": "मैं ठीक हूँ।",
+            "answer": "I am fine."
+        },
+        {
+            "question": "मुझे भूख लगी है।",
+            "answer": "I am hungry."
+        },
+        {
+            "question": "यह कितने का है?",
+            "answer": "How much does this cost?"
+        },
+        {
+            "question": "मेरा नाम रितेश है।",
+            "answer": "My name is Ritesh."
+        }
+    ]
+}

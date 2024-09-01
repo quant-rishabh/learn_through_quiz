@@ -1,0 +1,56 @@
+create json using this rules to to learn ()
+
+only single nested allowed like
+directly {"fruit" : [], "vegetable":[] }
+
+Quick JSON Property Rules:
+question: (Mandatory)
+
+Text of the question.
+Example: "question": "What is a primary key?"
+answer: (Mandatory)
+
+Expected answer(s). Multiple answers separated by ;. Additional info after @.
+Example: "answer": "Normalization;Redundancy@Reduces data redundancy"
+type: (Optional)
+
+Specifies the question type. Default is "text".
+Example: "type": "image"
+image: (Optional)
+
+Path to the image file, required if type is "image".
+Example: "image": "dbms_primary_key.png"
+Additional Keys: (Optional)
+
+Used for multi-part questions. Each key represents a part of the question.
+Example: "Normalization is used to remove - ": "Redundancy;Dependency"
+
+
+{
+    "database_concepts": [
+        {
+            "question": "What is a primary key?",
+            "answer": "A unique identifier for records"
+        },
+        {
+            "question": "What are the benefits of normalization?",
+            "answer": "Redundancy;Dependency@Normalization reduces redundancy and dependency in databases."
+        }
+    ],
+    "networking": [
+        {
+            "question": "Identify this network topology",
+            "answer": "Star topology",
+            "image": "network_star_topology.png",
+            "type": "image"
+        }
+    ],
+    "dbms_concepts": [
+        {
+            "question": "DBMS Concepts",
+            "Normalization is used to remove - ": "Redundancy;Dependency",
+            "Referential integrity ensures that...": "Consistency",
+            "To improve query performance, you can...": "Denormalize"
+        }
+    ]
+}
