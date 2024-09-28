@@ -1,0 +1,49 @@
+{
+    "english": {
+        "vocab": {
+            "fruits": 2,
+            "vegetables": 0,
+            "pulses": 0,
+            "dry_fruits": 0
+        },
+        "vocab.json": {
+            "fruits": 1
+        }
+    },
+    "social science": {
+        "fruit_vegetable": {
+            "fruits": 0
+        },
+        "india_states": {
+            "india_states_capitals": 0
+        }
+    },
+    "food": {
+        "dry_fruit": {
+            "dry_fruits_hindi_to_english": 0
+        },
+        "dry_fruit.json": {
+            "dry_fruits_hindi_to_english": 8
+        }
+    },
+    "maths": {
+        "addition": {
+            "single digit addition ": 0,
+            "missing_number_addition": 0
+        },
+        "addition.json": {
+            "single digit addition ": 13
+        }
+    },
+    "Speaking_English": {
+        "tenses": {
+            "simple tense 1": 0,
+            "simple tense 2": 0
+        },
+        "basic_terms": {
+            "sentences": 0,
+            "basic 2": 0,
+            "basic 3": 0
+        }
+    }
+}

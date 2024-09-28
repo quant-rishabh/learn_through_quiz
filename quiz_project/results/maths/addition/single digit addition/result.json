@@ -1,0 +1,100 @@
+[
+    {
+        "date_time": "2024-09-12 01:16:50",
+        "time_taken_minutes": 0.41,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 01:26:08",
+        "time_taken_minutes": 0.74,
+        "correct_answers": 9,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 18:48:23",
+        "time_taken_minutes": 0.38,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 18:49:00",
+        "time_taken_minutes": 0.45,
+        "correct_answers": 19,
+        "wrong_answers": 0,
+        "practice_sessions": 20
+    },
+    {
+        "date_time": "2024-09-12 18:49:55",
+        "time_taken_minutes": 0.39,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 18:51:09",
+        "time_taken_minutes": 0.3,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 18:55:40",
+        "time_taken_minutes": 0.32,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 18:58:20",
+        "time_taken_minutes": 0.33,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 18:59:21",
+        "time_taken_minutes": 0.3,
+        "correct_answers": 20,
+        "wrong_answers": 0,
+        "practice_sessions": 20
+    },
+    {
+        "date_time": "2024-09-12 19:02:34",
+        "time_taken_minutes": 0.26,
+        "correct_answers": 10,
+        "wrong_answers": 0,
+        "practice_sessions": 10
+    },
+    {
+        "date_time": "2024-09-12 19:08:57",
+        "time_taken_minutes": 0.8,
+        "correct_answers": 18,
+        "wrong_answers": 0,
+        "practice_sessions": 18
+    },
+    {
+        "date_time": "2024-09-12 19:17:37",
+        "time_taken_minutes": 0.64,
+        "correct_answers": 36,
+        "wrong_answers": 0,
+        "practice_sessions": 36
+    },
+    {
+        "date_time": "2024-09-12 19:23:50",
+        "time_taken_minutes": 0.61,
+        "correct_answers": 18,
+        "wrong_answers": 0,
+        "practice_sessions": 18
+    },
+    {
+        "date_time": "2024-09-12 19:24:52",
+        "time_taken_minutes": 0.57,
+        "correct_answers": 18,
+        "wrong_answers": 0,
+        "practice_sessions": 18
+    }
+]

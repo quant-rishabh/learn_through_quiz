@@ -1,0 +1,71 @@
+Below is the sample data for you , now you create json data for the<dry fruit hindi to english> <optional image> and just use name in image like img1 img2 img3....
+
+
+"Three Use Cases for a JSON Quiz on 3 Famous Places in India
+1. Famous Places in India with Images (Images in the Question)
+In this case, images are shown within the question using "type": "image" and "image".
+
+json
+Copy code
+{
+    "famous_places_in_india": [
+        {
+            "What is this famous place located in Delhi, known for its red sandstone architecture?": "Red Fort",
+            "type": "image",
+            "image": "red_fort.png"
+        },
+        {
+            "What is this famous mausoleum in Agra?": "Taj Mahal",
+            "type": "image",
+            "image": "taj_mahal.png"
+        },
+        {
+            "Which iconic temple complex is located in Tamil Nadu?": "Meenakshi Temple",
+            "type": "image",
+            "image": "meenakshi_temple.png"
+        }
+    ]
+}
+2. Famous Places in India with Optional Images (Images Shown After Answer)
+In this case, images are shown after the answer is provided, using only the "image" key.
+
+json
+Copy code
+{
+    "famous_places_in_india": [
+        {
+            "What is the famous place located in Delhi, known for its red sandstone architecture?": "Red Fort",
+            "image": "red_fort.png"
+        },
+        {
+            "What is the famous mausoleum in Agra?": "Taj Mahal",
+            "image": "taj_mahal.png"
+        },
+        {
+            "Which iconic temple complex is located in Tamil Nadu?": "Meenakshi Temple",
+            "image": "meenakshi_temple.png"
+        }
+    ]
+}
+3. Famous Places in India without Images (Text-Only Quiz)
+In this case, there are no images associated with the questions, only text-based questions and answers.
+
+json
+Copy code
+{
+    "famous_places_in_india": [
+        {
+            "What is the famous place located in Delhi, known for its red sandstone architecture?": "Red Fort"
+        },
+        {
+            "What is the famous mausoleum in Agra?": "Taj Mahal"
+        },
+        {
+            "Which iconic temple complex is located in Tamil Nadu?": "Meenakshi Temple"
+        }
+    ]
+}
+Summary of Use Cases:
+With Images: Use both "type": "image" and "image" to display images during the question.
+With Optional Images: Only use "image" to display images after the answer is provided.
+Without Images: Purely text-based, no "type" or "image" fields required."

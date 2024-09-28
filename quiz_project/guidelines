@@ -1,134 +1,94 @@
-Detailed Rules for Creating the JSON Data Structure
-When creating JSON files for your quiz application, it's important to follow specific rules and conventions to ensure that the application functions correctly. Below are the detailed rules for structuring your JSON data:
 
-1. General Structure
-Each JSON file represents a different subject or category (e.g., math.json, physics.json).
-Inside each JSON file, topics are represented as keys, with the value being a list of question objects.
-Example:
+open terminal 
 
+File Management Guidelines (Short and Clear)
+These are the rules and folder structure to manage JSON files and images for quizzes. Follow these to keep things simple, organized, and scalable.
+
+1. Folder Structure
+learning_section/ (contains JSON files for quiz content)
+<category>/ (e.g., english/, science/)
+<lesson>.json (e.g., vocab.json, geography.json)
+images/ (contains images for quiz questions)
+<category>/ (e.g., english/, science/)
+<lesson>/ (corresponds to the lesson in learning_section)
+<topic>/ (same topic names as in the JSON file)
+<image files> (e.g., apple.png, map_of_africa.png)
+2. Rules for JSON Files
+Basic Structure of JSON Files
+Lesson JSON File: Represents a lesson (e.g., vocab.json).
+Topics: Each topic contains an array of questions and answers.
+Image Rules in JSON
+If you need an image in the question:
+You must include both "image": "name_of_image" and "type": "image".
+If you need an image after the answer:
+You only need "image": "name_of_image".
+If no image is needed:
+Don't include "image" or "type" keys.
+Example JSON:
 json
 Copy code
 {
-    "geography": [
+    "fruits": [
         {
-            "question": "Identify this landmark",
-            "answer": "Eiffel Tower",
-            "image": "eiffel_tower.png",
-            "type": "image"
-        }
-    ],
-    "history": [
+            "What is this fruit?": {
+                "answer": "apple",
+                "type": "image",
+                "image": "apple.png"
+            }
+        },
         {
-            "question": "Who was the first President of the United States?",
-            "answer": "George Washington"
+            "What color is a banana?": "yellow",
+            "image": "banana.png"
         }
     ]
 }
-2. Question Object Structure
-Each question object can have the following keys:
+3. Folder Structure Overview
+Example 1: JSON File Structure in learning_section/
+Copy code
+learning_section/
+├── english/
+│   ├── vocab.json
+├── social_science/
+│   ├── geography.json
+Example 2: Image Folder Structure in images/
+Copy code
+images/
+├── english/
+│   ├── vocab/
+│   │   ├── fruits/
+│   │   │   ├── apple.png
+│   │   │   ├── banana.png
+├── social_science/
+│   ├── geography/
+│   │   ├── physical_geography/
+│   │   │   ├── map_of_africa.png
+4. Steps to Add New Content
+Add a new lesson:
 
-question: (Mandatory)
+Create a new JSON file under learning_section/<category>/.
+Example: learning_section/social_science/geography.json
+Add a new topic in the lesson JSON file:
 
-This is the text of the question being asked.
-Example: "question": "Who was the first President of the United States?"
-answer: (Mandatory or Optional depending on type)
-
-This is the expected answer(s) to the question. Multiple correct answers should be separated by a semicolon (;).
-If additional information is provided, it should be separated from the answer(s) by an @ symbol.
-Example: "answer": "George Washington"
-Example with multiple answers: "answer": "Red;Blue;Green"
-Example with additional info: "answer": "Red;Blue;Green@These are primary colors"
-image: (Optional)
-
-This specifies the image file associated with the question.
-The image should be located in the directory structure: images/<data_file>/<topic>/.
-Example: "image": "eiffel_tower.png"
-Note: If the type is image, this key is mandatory.
-type: (Optional)
-
-This specifies the type of question.
-Default: "text"
-If set to "image", the application will show the image associated with the question and then prompt for the answer.
-Example: "type": "image"
-Additional Keys for Multi-Answer Questions: (Optional)
-
-For multi-answer questions (like filling out multiple parts of a DBMS question), each key in the object represents a different part of the question, with the value being the expected answer.
-These keys are used in addition to the question key.
+Add the topic name in the JSON.
 Example:
 json
 Copy code
 {
-    "question": "DBMS Concepts",
-    "normalization is needed to remove - ": "redundancy;dependency",
-    "referential integrity ensures that...": "consistency",
-    "to improve query performance...": "denormalize"
-}
-3. Folder and File Structure
-JSON Files: All JSON files should be placed in the directory specified in the config.json under learning_section_directory.
-
-Example: learning_section/math.json
-Image Files: Images should be stored in a directory structure that reflects the JSON file and topic.
-
-Directory Structure: images/<data_file>/<topic>/
-Example: images/math/geometry/triangle.png
-Results Directory: The results of the quiz are saved in the directory specified in the config.json under results_directory.
-
-4. Behavior Based on type
-type: "text" (Default):
-
-The application will display the question text and prompt the user to enter the answer.
-type: "image":
-
-The application will display the image specified in the image key and then prompt the user to enter the answer.
-If the image key is missing when type is set to "image", this will result in an error.
-5. Error Handling
-If a required key is missing (like question or answer), the application may fail to process that question correctly.
-If an image is specified but the type is not set to "image", the image will be shown after the question is answered correctly as a reference.
-Ensure that the image paths and names are correct and match the structure defined above.
-6. Practice Attempts
-The practice_attempts key in config.json defines how many times a user has to practice a question if they answer it incorrectly.
-The application will enforce this number of attempts for each incorrect answer.
-7. Result Storage
-Results are stored in JSON files named according to the data file and topic.
-These files are stored in the directory specified under results_directory in config.json.
-8. Special Commands During Quiz
-skip: Typing "skip" as an answer will skip the current question without marking it incorrect or requiring practice.
-9. Example JSON File
-Here’s an example JSON file with multiple topics and different types of questions:
-
-json
-Copy code
-{
-    "geography": [
+    "physical_geography": [
         {
-            "question": "Identify this landmark",
-            "answer": "Eiffel Tower",
-            "image": "eiffel_tower.png",
-            "type": "image"
-        },
-        {
-            "question": "What is the capital of France?",
-            "answer": "Paris"
-        }
-    ],
-    "history": [
-        {
-            "question": "Who was the first President of the United States?",
-            "answer": "George Washington"
-        },
-        {
-            "question": "In which year did World War II end?",
-            "answer": "1945"
-        }
-    ],
-    "dbms": [
-        {
-            "question": "based on normalization",
-            "why we need normalization to remove - ": "redundancy;dependency",
-            "referential integrity ensures that...": "consistency",
-            "if we need to improve query performance, reduce complexity, then we can ... the tables": "denormalize"
+            "What is the largest desert?": "Sahara Desert",
+            "image": "sahara.png"
         }
     ]
 }
-Summary
-By following these rules, you ensure that the quiz application will process the data correctly and provide a consistent experience for users. Keep this guide as a reference whenever you create or modify JSON data for your quizzes.
+Add corresponding images:
+
+Place the images in the images/<category>/<lesson>/<topic>/ directory.
+Example: images/social_science/geography/physical_geography/sahara.png
+5. Key Points to Remember
+JSON Files go inside learning_section/ folder.
+Images go inside images/ folder in <category>/<lesson>/<topic> structure.
+Image Reference:
+If you need an image in the question, use both "image": "name_of_image" and "type": "image".
+If you need an image after the answer, only use "image": "name_of_image".
+By following these simple rules and structure, you can easily manage and scale the quiz system while keeping everything organized.
