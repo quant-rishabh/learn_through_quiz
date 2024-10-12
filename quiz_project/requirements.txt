@@ -17,12 +17,10 @@ idna==2.10
 pillow==10.4.0
 PyAudio==0.2.14
 pygame==2.6.0
-pypiwin32==223
 PyQt5==5.15.11
 PyQt5-Qt5==5.15.2
 PyQt5_sip==12.15.0
 pyttsx3==2.91
-pywin32==306
 rapidfuzz==3.9.7
 requests==2.32.3
 rfc3986==1.5.0

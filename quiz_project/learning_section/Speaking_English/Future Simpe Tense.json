@@ -1,0 +1,76 @@
+{
+  "Future Simple Tense": {
+    "1. General Facts (in the future)": [
+      { "तापमान कल बढ़ जाएगा।": "The temperature will rise tomorrow." },
+      { "मानव जनसंख्या भविष्य में बढ़ेगी।": "The human population will grow in the future." },
+      { "हमारी कंपनी अगले साल नई परियोजनाएँ शुरू करेगी।": "Our company will start new projects next year." },
+      { "चंद्रमा हर महीने अपना आकार बदलता रहेगा।": "The moon will continue to change its shape every month." },
+      { "भविष्य में बिजली और अधिक महंगी हो जाएगी।": "Electricity will become more expensive in the future." },
+      { "सूरज कल सुबह 6 बजे उगेगा।": "The sun will rise at 6 AM tomorrow." },
+      { "तकनीक आने वाले वर्षों में तेजी से विकसित होगी।": "Technology will advance rapidly in the coming years." },
+      { "वैज्ञानिक भविष्य में नई दवाइयाँ खोज लेंगे।": "Scientists will discover new medicines in the future." },
+      { "कंप्यूटर प्रोसेसर और तेज़ हो जाएंगे।": "Computer processors will become faster." },
+      { "मनुष्य भविष्य में मंगल ग्रह पर जाएगा।": "Humans will go to Mars in the future." }
+    ],
+    "2. Daily Activities / Habits (in the future)": [
+      { "मैं कल सुबह दौड़ने जाऊँगा।": "I will go running tomorrow morning." },
+      { "वह शाम को काम से घर वापस आएगा।": "He will come back from work in the evening." },
+      { "वे अगले हफ्ते हर दिन जिम जाएँगे।": "They will go to the gym every day next week." },
+      { "हम अगले महीने हर रविवार को पार्क में टहलने जाएँगे।": "We will go for a walk in the park every Sunday next month." },
+      { "वह सुबह 8 बजे उठेगी।": "She will wake up at 8 AM." },
+      { "मैं कल अपनी कार साफ़ करूँगा।": "I will clean my car tomorrow." },
+      { "हम रात को 10 बजे सो जाएँगे।": "We will go to bed at 10 PM." },
+      { "वे हर शनिवार को फुटबॉल खेलेंगे।": "They will play football every Saturday." },
+      { "वह अपने दोस्तों से मिलकर अगले सप्ताह छुट्टी मनाएगा।": "He will meet his friends and celebrate next week." },
+      { "मैं अगले महीने अपने माता-पिता से मिलने जाऊँगा।": "I will visit my parents next month." }
+    ],
+    "3. Scheduled Events (in the future)": [
+      { "विमान शाम 6 बजे उड़ान भरेगा।": "The plane will depart at 6 PM." },
+      { "दुकान कल सुबह 9 बजे खुलेगी।": "The shop will open at 9 AM tomorrow." },
+      { "बैठक दोपहर 3 बजे शुरू होगी।": "The meeting will start at 3 PM." },
+      { "फिल्म रात 8 बजे शुरू होगी।": "The movie will begin at 8 PM." },
+      { "हमारी कक्षा कल सुबह 10 बजे शुरू होगी।": "Our class will start at 10 AM tomorrow." },
+      { "ट्रेन अगले सोमवार को सुबह 7 बजे आएगी।": "The train will arrive at 7 AM next Monday." },
+      { "सम्मेलन अगले सप्ताह शुरू होगा।": "The conference will start next week." },
+      { "कॉन्सर्ट अगले शुक्रवार को शाम 7 बजे शुरू होगा।": "The concert will start at 7 PM next Friday." },
+      { "बस 5 मिनट में यहाँ पहुँच जाएगी।": "The bus will arrive here in 5 minutes." },
+      { "अगले हफ्ते क्रिकेट मैच खेला जाएगा।": "The cricket match will be played next week." }
+    ],
+    "4. Instructions or Directions (in the future)": [
+      { "तुम बाईं ओर मुड़ोगे।": "You will turn left." },
+      { "तुम फॉर्म भरकर उसे जमा करोगे।": "You will fill out the form and submit it." },
+      { "वह बटन दबाकर मशीन चालू करेगा।": "He will press the button to start the machine." },
+      { "तुम इस लिंक पर क्लिक करोगे।": "You will click on this link." },
+      { "आप पासवर्ड दर्ज करके लॉग इन करेंगे।": "You will log in by entering the password." },
+      { "तुम अपनी फ़ाइल अपलोड करोगे।": "You will upload your file." },
+      { "वह फ़ॉर्म सबमिट करने के बाद मेल भेजेगी।": "She will send the email after submitting the form." },
+      { "तुम कोड को चलाने के लिए 'रन' बटन दबाओगे।": "You will press the 'Run' button to execute the code." },
+      { "वह कार स्टार्ट करके गाड़ी चलाएगा।": "He will start the car and drive." },
+      { "तुम पहले फॉर्म भरोगे और फिर भुगतान करोगे।": "You will first fill out the form and then make the payment." }
+    ],
+    "5. Permanent Situations (in the future)": [
+      { "वह भविष्य में डॉक्टर बनेगी।": "She will become a doctor in the future." },
+      { "वे अगले साल एक बड़े घर में रहेंगे।": "They will live in a big house next year." },
+      { "हमारे बच्चे भविष्य में विश्वविद्यालय जाएंगे।": "Our children will go to university in the future." },
+      { "मैं अगले साल इस कंपनी में काम करूँगा।": "I will work at this company next year." },
+      { "वह भविष्य में एक बड़ी कंपनी में काम करेगा।": "He will work for a big company in the future." },
+      { "हम भविष्य में इस शहर में रहेंगे।": "We will live in this city in the future." },
+      { "वह अगले महीने एक नई नौकरी शुरू करेगी।": "She will start a new job next month." },
+      { "वे अगले साल विदेश यात्रा करेंगे।": "They will travel abroad next year." },
+      { "हम भविष्य में यहाँ काम करते रहेंगे।": "We will continue working here in the future." },
+      { "वह एक सॉफ्टवेयर इंजीनियर बनेगा।": "He will become a software engineer." }
+    ],
+    "6. Asking Questions (in the future)": [
+      { "क्या तुम कल काम पर जाओगे?": "Will you go to work tomorrow?" },
+      { "क्या वह अगले हफ्ते छुट्टी पर जाएगी?": "Will she go on vacation next week?" },
+      { "क्या वे हमें अगले महीने मिलेंगे?": "Will they meet us next month?" },
+      { "क्या तुम बैठक में भाग लोगे?": "Will you attend the meeting?" },
+      { "क्या वह अगले महीने नई नौकरी शुरू करेगा?": "Will he start a new job next month?" },
+      { "क्या तुम्हें प्रोजेक्ट पर काम करना होगा?": "Will you have to work on the project?" },
+      { "क्या वे समय पर यहाँ आएँगे?": "Will they arrive here on time?" },
+      { "क्या आप अगले हफ्ते छुट्टी पर जाएँगे?": "Will you go on vacation next week?" },
+      { "क्या हम कल इस पर काम करेंगे?": "Will we work on this tomorrow?" },
+      { "क्या वह अगले साल विदेश यात्रा करेगा?": "Will he travel abroad next year?" }
+    ]
+  }
+}

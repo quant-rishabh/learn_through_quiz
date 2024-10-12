@@ -1,0 +1,74 @@
+{
+  "1. General Facts (in the past)": [
+      { "वह 10 साल पहले अमेरिका में रहता था।": "He lived in the USA ten years ago." },
+      { "हमने पिछली गर्मियों में एक नई कार खरीदी।": "We bought a new car last summer." },
+      { "गैलीलियो ने साबित किया कि पृथ्वी गोल है।": "Galileo proved that the Earth is round." },
+      { "द्वितीय विश्व युद्ध 1945 में समाप्त हुआ।": "World War II ended in 1945." },
+      { "उन्होंने 20वीं सदी की शुरुआत में बिजली की खोज की।": "They discovered electricity in the early 20th century." },
+      { "हमारे पूर्वज जंगलों में रहते थे।": "Our ancestors lived in forests." },
+      { "पहली कंप्यूटर प्रोग्रामिंग भाषा 1950 के दशक में विकसित की गई थी।": "The first programming language was developed in the 1950s." },
+      { "दुनिया का पहला हवाई जहाज 1903 में उड़ा।": "The world's first airplane flew in 1903." },
+      { "न्यूटन ने गुरुत्वाकर्षण का सिद्धांत खोजा।": "Newton discovered the theory of gravity." },
+      { "पहली मोबाइल कॉल 1973 में की गई थी।": "The first mobile call was made in 1973." }
+    ],
+    "2. Daily Activities / Habits (in the past)": [
+      { "मैं हर सुबह दौड़ने जाता था।": "I went running every morning." },
+      { "वह हर रविवार को अपने दादा-दादी से मिलने जाती थी।": "She visited her grandparents every Sunday." },
+      { "हम रोज़ स्कूल जाते थे।": "We went to school every day." },
+      { "मैंने हर शाम किताब पढ़ी।": "I read a book every evening." },
+      { "वे रोज़ शाम को टहलने जाते थे।": "They went for a walk every evening." },
+      { "वह हर दिन दोपहर का भोजन घर से लाता था।": "He brought lunch from home every day." },
+      { "मैंने हर शुक्रवार को फुटबॉल खेला।": "I played football every Friday." },
+      { "वह हर रात 10 बजे सोता था।": "He slept at 10 PM every night." },
+      { "हम हर महीने शहर में खरीदारी करते थे।": "We shopped in the city every month." },
+      { "मैंने हर रविवार को अपने कमरे की सफाई की।": "I cleaned my room every Sunday." }
+    ],
+    "3. Scheduled Events (in the past)": [
+      { "प्लेन शाम 6 बजे उड़ान भर चुका था।": "The plane departed at 6 PM." },
+      { "दुकान सुबह 9 बजे खुली थी।": "The shop opened at 9 AM." },
+      { "बैठक दोपहर 3 बजे शुरू हुई थी।": "The meeting started at 3 PM." },
+      { "फिल्म रात 8 बजे शुरू हुई थी।": "The movie began at 8 PM." },
+      { "हमारी कक्षा कल सुबह 10 बजे शुरू हुई थी।": "Our class started at 10 AM yesterday." },
+      { "विमान समय पर पहुंच गया था।": "The flight arrived on time." },
+      { "ट्रेन 7 बजे स्टेशन पहुंची थी।": "The train arrived at the station at 7 PM." },
+      { "सम्मेलन पिछले सप्ताह शुरू हुआ था।": "The conference started last week." },
+      { "पिछली रात संगीत कार्यक्रम 7 बजे शुरू हुआ।": "The concert started at 7 PM last night." },
+      { "सिनेमा हॉल 6 बजे खुला था।": "The cinema opened at 6 PM." }
+    ],
+    "4. Instructions or Directions (in the past)": [
+      { "उसने मुझे बाईं ओर मुड़ने को कहा।": "He told me to turn left." },
+      { "उन्होंने मुझे उस फॉर्म को भरने के लिए कहा।": "They asked me to fill out the form." },
+      { "शिक्षक ने हमें किताब पढ़ने को कहा।": "The teacher told us to read the book." },
+      { "उसने मुझसे बटन दबाने को कहा।": "He asked me to press the button." },
+      { "उन्होंने हमें मेल भेजने के लिए कहा।": "They told us to send the email." },
+      { "वह मुझे उस लिंक पर क्लिक करने के लिए कह रही थी।": "She was asking me to click on the link." },
+      { "उन्होंने मुझे दस्तावेज़ अपलोड करने को कहा।": "They asked me to upload the document." },
+      { "शेफ ने हमें पानी उबालने को कहा।": "The chef told us to boil the water." },
+      { "उन्होंने मुझे इसे पूरा करने का निर्देश दिया।": "They instructed me to complete this." },
+      { "उसने मुझे फाइल डाउनलोड करने के लिए कहा।": "He told me to download the file." }
+    ],
+    "5. Permanent Situations (in the past)": [
+      { "वह एक इंजीनियर के रूप में काम करता था।": "He worked as an engineer." },
+      { "वे दिल्ली में रहते थे।": "They lived in Delhi." },
+      { "हमने उस स्कूल में पढ़ाई की थी।": "We studied at that school." },
+      { "वह पहले एक डॉक्टर थी।": "She was a doctor." },
+      { "वह तीन साल तक बैंक में काम करता था।": "He worked in the bank for three years." },
+      { "मैंने पहले इस कंपनी में काम किया था।": "I worked in this company before." },
+      { "हम पहले छोटे शहर में रहते थे।": "We lived in a small town before." },
+      { "वह दस साल पहले इस परियोजना पर काम करता था।": "He worked on this project ten years ago." },
+      { "वे पहले एक बड़ी कंपनी में काम करते थे।": "They worked for a big company before." },
+      { "वह पहले एक शिक्षक थी।": "She was a teacher before." }
+    ],
+    "6. Asking Questions (in the past)": [
+      { "क्या तुमने कल उस बैठक में भाग लिया था?": "Did you attend the meeting yesterday?" },
+      { "क्या उसने तुम्हें फाइल भेजी थी?": "Did she send you the file?" },
+      { "क्या उन्होंने तुम्हारी मदद की थी?": "Did they help you?" },
+      { "क्या तुमने उस समय जिम ज्वाइन किया था?": "Did you join the gym at that time?" },
+      { "क्या तुमने उस प्रोजेक्ट पर काम किया था?": "Did you work on that project?" },
+      { "क्या तुमने उसके बारे में सुना था?": "Did you hear about it?" },
+      { "क्या वह पहले दिल्ली में रहती थी?": "Did she live in Delhi before?" },
+      { "क्या तुमने सुबह कॉफी पी थी?": "Did you drink coffee in the morning?" },
+      { "क्या तुमने उस लिंक पर क्लिक किया था?": "Did you click on that link?" },
+      { "क्या तुमने अपना होमवर्क पूरा किया था?": "Did you finish your homework?" }
+    ]
+}

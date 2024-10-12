@@ -1,7 +1,7 @@
 {
-    "learning_section_directory": "learning_section",
-    "image_directory": "images",
+    "learning_section_directory": "/Users/macbookpro/Documents/Developer/learn_through_quiz/quiz_project/learning_section",
+    "image_directory": "/Users/macbookpro/Documents/Developer/learn_through_quiz/quiz_project/images",
     "practice_attempts": 3,
-    "results_directory": "results",
+    "results_directory": "/Users/macbookpro/Documents/Developer/learn_through_quiz/quiz_project/results",
     "fuzzy_search_threshold": 80
 }

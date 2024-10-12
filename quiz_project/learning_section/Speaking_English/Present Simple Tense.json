@@ -1,0 +1,74 @@
+{
+  "1. General Facts": [
+      { "पानी 0 डिग्री सेल्सियस पर जमता है।": "Water freezes at 0 degrees Celsius." },
+      { "सूरज पूरब से निकलता है।": "The sun rises in the east." },
+      { "प्रकाश ध्वनि से तेज़ चलता है।": "Light travels faster than sound." },
+      { "धरती सूर्य के चारों ओर घूमती है।": "The Earth orbits the Sun." },
+      { "इंसान के पास पाँच इंद्रियाँ होती हैं।": "Humans have five senses." },
+      { "सभी पक्षी अंडे देते हैं।": "All birds lay eggs." },
+      { "गुरुत्वाकर्षण चीज़ों को नीचे खींचता है।": "Gravity pulls objects down." },
+      { "गाय घास खाती है।": "Cows eat grass." },
+      { "आदमी के पास दिमाग होता है।": "Humans have brains." },
+      { "पृथ्वी 70% पानी से ढकी हुई है।": "The Earth is covered with 70% water." }
+    ],
+    "2. Daily Activities / Habits": [
+      { "मैं हर सुबह कॉफी पीता हूँ।": "I drink coffee every morning." },
+      { "वह नाश्ते से पहले समाचार पढ़ता है।": "He reads the news before breakfast." },
+      { "वे हर दिन काम पर बस से जाते हैं।": "They take the bus to work every day." },
+      { "मैं हर शुक्रवार को अपने दोस्तों से मिलता हूँ।": "I meet my friends every Friday." },
+      { "वह हर रविवार को अपने माता-पिता के घर जाती है।": "She visits her parents every Sunday." },
+      { "वह शाम को अपने कुत्ते को टहलाने ले जाती है।": "She walks her dog in the evening." },
+      { "हम हर सोमवार को टीम की मीटिंग करते हैं।": "We have a team meeting every Monday." },
+      { "वह रोज़ जिम जाता है।": "He goes to the gym every day." },
+      { "मैं हर रात किताब पढ़ता हूँ।": "I read a book every night." },
+      { "वे हर हफ्ते फिल्में देखते हैं।": "They watch movies every week." }
+    ],
+    "3. Scheduled Events (Future)": [
+      { "विमान शाम 6 बजे रवाना होता है।": "The plane departs at 6 PM." },
+      { "दुकान सुबह 9 बजे खुलती है।": "The shop opens at 9 AM." },
+      { "सम्मेलन अगले सप्ताह शुरू होता है।": "The conference starts next week." },
+      { "फिल्म आज रात 8 बजे शुरू होती है।": "The movie begins at 8 PM tonight." },
+      { "हमारी कक्षा कल सुबह 10 बजे शुरू होती है।": "Our class starts at 10 AM tomorrow." },
+      { "बैठक दोपहर 3 बजे शुरू होती है।": "The meeting starts at 3 PM." },
+      { "ट्रेन रात 9 बजे आती है।": "The train arrives at 9 PM." },
+      { "कक्षा हर सोमवार को 8 बजे शुरू होती है।": "The class starts at 8 AM every Monday." },
+      { "हमारी फ़्लाइट दोपहर 2 बजे उड़ान भरती है।": "Our flight takes off at 2 PM." },
+      { "कॉन्सर्ट शाम 7 बजे शुरू होता है।": "The concert starts at 7 PM." }
+    ],
+    "4. Instructions or Directions": [
+      { "लॉगिन करने के लिए, आप अपना यूज़रनेम और पासवर्ड दर्ज करते हैं।": "To log in, you enter your username and password." },
+      { "आप मशीन शुरू करने के लिए बटन दबाते हैं।": "You press the button to start the machine." },
+      { "फॉर्म पूरा करने के बाद, आप 'सबमिट' पर क्लिक करते हैं।": "After you complete the form, you click 'Submit.'" },
+      { "आप दूसरी सड़क पर बाएँ मुड़ते हैं।": "You turn left at the second street." },
+      { "जब पानी उबलने लगता है, तो आप नमक डालते हैं।": "You add salt after the water boils." },
+      { "आप मेनू से 'सेटिंग्स' पर क्लिक करते हैं।": "You click 'Settings' from the menu." },
+      { "फाइल अपलोड करने के लिए, 'अपलोड' बटन दबाएं।": "To upload a file, press the 'Upload' button." },
+      { "आप इस लिंक पर क्लिक करके पेज खोलते हैं।": "You open the page by clicking this link." },
+      { "इस उपकरण को शुरू करने के लिए पावर बटन दबाएं।": "Press the power button to start this device." },
+      { "पहले आप फॉर्म भरते हैं, फिर उसे जमा करते हैं।": "First, you fill out the form, then you submit it." }
+    ],
+    "5. Permanent Situations": [
+      { "वह डॉक्टर के रूप में काम करती है।": "She works as a doctor." },
+      { "वे एक छोटे से शहर में रहते हैं।": "They live in a small town." },
+      { "हम सभी परियोजनाओं के लिए इस सॉफ्टवेयर का उपयोग करते हैं।": "We use this software for all our projects." },
+      { "मैं कंप्यूटर साइंस का अध्ययन करता हूँ।": "I study computer science." },
+      { "वह तीन भाषाएँ बोलता है।": "He speaks three languages." },
+      { "वह एक बड़ी कंपनी में काम करता है।": "He works for a big company." },
+      { "मैं एक सरकारी कर्मचारी हूँ।": "I am a government employee." },
+      { "हम इस बिल्डिंग में रहते हैं।": "We live in this building." },
+      { "वे बैंक में काम करते हैं।": "They work at a bank." },
+      { "वह मुंबई में रहती है।": "She lives in Mumbai." }
+    ],
+    "6. Asking Questions": [
+      { "क्या आप इस प्रक्रिया के इस हिस्से को समझते हैं?": "Do you understand this part of the process?" },
+      { "आप कितनी बार टीम मीटिंग में भाग लेते हैं?": "How often do you attend team meetings?" },
+      { "तुम अपने खाली समय में क्या करते हो?": "What do you do in your free time?" },
+      { "क्या उन्हें परियोजना में मदद की ज़रूरत है?": "Do they need help with the project?" },
+      { "क्या वह ऑफिस के पास रहती है?": "Does she live near the office?" },
+      { "क्या आप रोज़ जिम जाते हैं?": "Do you go to the gym every day?" },
+      { "वह कितनी बार यात्रा करती है?": "How often does she travel?" },
+      { "क्या यह सॉफ्टवेयर उपयोगकर्ता के अनुकूल है?": "Is this software user-friendly?" },
+      { "क्या आप हर हफ्ते कक्षा में जाते हैं?": "Do you attend class every week?" },
+      { "क्या वे हर दिन जल्दी उठते हैं?": "Do they wake up early every day?" }
+    ]
+}

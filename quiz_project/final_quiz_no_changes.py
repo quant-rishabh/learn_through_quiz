@@ -152,21 +152,36 @@ class QuizMaster:
         # Sort results by time_taken_minutes
         all_results_sorted = sorted(all_results, key=lambda x: x['time_taken_minutes'])
 
+        # ANSI color codes
+        RED = '\033[91m'
+        RESET = '\033[0m'
+
+        # Prepare the headers with red color
+        headers = [
+            f"{RED}Date{RESET}",
+            f"{RED}Time Taken (minutes){RESET}",
+            f"{RED}Correct Answers{RESET}",
+            f"{RED}Wrong Answers{RESET}",
+            f"{RED}Wrong Questions with Answers{RESET}"
+        ]
+
         # Prepare the data for tabulation
-        headers = ["Date", "Time Taken (minutes)", "Correct Answers", "Wrong Answers", "Practice Sessions"]
         table_data = [
             [
                 result['date_time'],
                 result['time_taken_minutes'],
                 result['correct_answers'],
                 result['wrong_answers'],
-                result['practice_sessions']
+                # Use .get() to provide a default empty list if 'wrong_questions_with_answers' key is missing
+                "\n".join([f"{idx + 1}. {q['question']} -> {q['correct_answer']}" for idx, q in
+                           enumerate(result.get('wrong_questions_with_answers', []))])
             ]
             for result in all_results_sorted
         ]
 
-        # Display the results in a tabular format
+        # Display the results in a tabular format with red headers
         print(tabulate(table_data, headers, tablefmt="grid"))
+
     def load_learning_data(self):
         """Load the persistent learning data from file, initialize if not present."""
         learning_data_file = "learning_data.json"
@@ -210,6 +225,11 @@ class QuizMaster:
         # Load existing learning data
         learning_data = self.load_learning_data()
 
+        # Strip any leading/trailing spaces from category, lesson, and topic
+        category = category.strip()
+        lesson = lesson.strip()
+        topic = topic.strip()
+
         # Ensure category exists in learning data
         if category not in learning_data:
             learning_data[category] = {}
@@ -228,7 +248,10 @@ class QuizMaster:
 
     def update_learning_data_with_new_topics(self, learning_data):
         """Update the learning data to add new topics from JSON files, without modifying existing data."""
+        # Strip any leading/trailing spaces from category, lesson, and topic
+
         for category in os.listdir(self.learning_section_directory):
+            category = category.strip()
             category_path = os.path.join(self.learning_section_directory, category)
             if os.path.isdir(category_path):
                 if category not in learning_data:
@@ -236,10 +259,12 @@ class QuizMaster:
                 for json_file in self.list_json_files_in_category(category_path):
                     self.load_data(os.path.splitext(os.path.basename(json_file))[0], category_path)
                     lesson = os.path.splitext(os.path.basename(json_file))[0]
+                    lesson = lesson.strip()
                     if lesson not in learning_data[category]:
                         learning_data[category][lesson] = {}
                     for topic in self.data.keys():
                         if topic not in learning_data[category][lesson]:
+                            topic = topic.strip()
                             learning_data[category][lesson][topic] = 0
 
         self.save_learning_data(learning_data)
@@ -345,9 +370,11 @@ class QuizMaster:
                 print(f"\nYour answer was incorrect. The correct answer is: {correct_answer}")
                 print("Let's practice the correct answer.")
                 self.practice_wrong_answer(correct_answer, key)
-                self.results.append({"question": key, "result": "correct after practice"})
+                # Store the wrong question and the correct answer
+                self.results.append({"question": key, "result": "wrong", "correct_answer": correct_answer})
             else:
-                self.results.append({"question": key, "result": "correct"})
+                # Append the result with an empty correct_answer for correct responses
+                self.results.append({"question": key, "result": "correct", "correct_answer": ""})
 
         # If there was no image at the start but the question has an image, show it now
         if not image_shown and "image" in question_data:
@@ -402,16 +429,23 @@ class QuizMaster:
         result_dir = os.path.join(self.results_directory, category, lesson, topic)
         os.makedirs(result_dir, exist_ok=True)
 
+        # Collect wrong questions and their correct answers
+        wrong_questions_with_answers = [
+            {"question": r['question'], "correct_answer": r['correct_answer']}
+            for r in self.results if r['result'] == 'wrong'
+        ]
+
         # File path for the result JSON file
         result_file_name = os.path.join(result_dir, "result.json")
 
         # Prepare result data to save
         new_result_data = {
-            "date_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "date_time": datetime.now().strftime("%H:%M:%S %d-%m-%Y"),
             "time_taken_minutes": round(time_taken, 2),
             "correct_answers": len([r for r in self.results if r['result'] == 'correct']),
             "wrong_answers": len([r for r in self.results if r['result'] == 'wrong']),
-            "practice_sessions": len(self.results)
+            "wrong_questions_with_answers": wrong_questions_with_answers
+            # Add the wrong questions and correct answers here
         }
 
         # Check if the file exists; if it does, load existing data, else create a new list
@@ -458,8 +492,14 @@ class QuizMaster:
             end_time = time.time()
             time_taken = (end_time - start_time) / 60
 
-            # Corrected call to record_result, passing category, lesson, topic, and time_taken
+            # Strip the '.json' from current_lesson
+            self.current_lesson = self.current_lesson.replace(".json", "").strip()
+
+            # Record the result after finishing the quiz
             self.record_result(self.current_category, self.current_lesson, topic, time_taken)
+
+            # Now call update_learning_data to increment the count
+            self.update_learning_data(self.current_category, self.current_lesson, topic)
 
             # Show test results immediately after completing the test
             self.show_test_results(self.current_category, self.current_lesson, topic)
@@ -496,7 +536,7 @@ class QuizMaster:
                 print(f"\nYour answer was incorrect. The correct answer is: {correct_answer}")
                 print("Let's practice the correct answer.")
                 self.practice_wrong_answer(correct_answer, key)
-                self.results.append({"question": key, "result": "correct after practice"})
+                self.results.append({"question": key, "result": "wrong", "correct_answer": correct_answer})
             else:
                 self.results.append({"question": key, "result": "correct"})
 
@@ -554,12 +594,11 @@ def get_selection_from_list(options, prompt):
             except ValueError:
                 print("Invalid input. Please enter a number.")
 def main():
-    config_file = "config.json"
+    config_file = "/Users/macbookpro/Documents/Developer/learn_through_quiz/quiz_project/config.json"
     quiz_master = QuizMaster(config_file)
 
     while True:
-        # Load and update learning data (this will initialize or update if needed)
-        learning_data = quiz_master.load_learning_data()
+
 
         # Display learning data at the start
         quiz_master.display_learning_data()
