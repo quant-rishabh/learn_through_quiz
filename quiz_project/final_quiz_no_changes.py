@@ -225,22 +225,22 @@ class QuizMaster:
         # Load existing learning data
         learning_data = self.load_learning_data()
 
-        # Strip any leading/trailing spaces from category, lesson, and topic
-        category = category.strip()
-        lesson = lesson.strip()
-        topic = topic.strip()
-
-        # Ensure category exists in learning data
-        if category not in learning_data:
-            learning_data[category] = {}
-
-        # Ensure lesson exists in the category
-        if lesson not in learning_data[category]:
-            learning_data[category][lesson] = {}
-
-        # Ensure topic exists and increment the count
-        if topic not in learning_data[category][lesson]:
-            learning_data[category][lesson][topic] = 0
+        # # Strip any leading/trailing spaces from category, lesson, and topic
+        # category = category.strip()
+        # lesson = lesson.strip()
+        # topic = topic.strip()
+        #
+        # # Ensure category exists in learning data
+        # if category not in learning_data:
+        #     learning_data[category] = {}
+        #
+        # # Ensure lesson exists in the category
+        # if lesson not in learning_data[category]:
+        #     learning_data[category][lesson] = {}
+        #
+        # # Ensure topic exists and increment the count
+        # if topic not in learning_data[category][lesson]:
+        #     learning_data[category][lesson][topic] = 0
         learning_data[category][lesson][topic] += 1
 
         # Save the updated learning data
@@ -248,32 +248,39 @@ class QuizMaster:
 
     def update_learning_data_with_new_topics(self, learning_data):
         """Update the learning data to add new topics from JSON files, without modifying existing data."""
-        # Strip any leading/trailing spaces from category, lesson, and topic
-
         for category in os.listdir(self.learning_section_directory):
             category = category.strip()
             category_path = os.path.join(self.learning_section_directory, category)
             if os.path.isdir(category_path):
+                # Add category if it doesn't exist
                 if category not in learning_data:
                     learning_data[category] = {}
+
                 for json_file in self.list_json_files_in_category(category_path):
                     self.load_data(os.path.splitext(os.path.basename(json_file))[0], category_path)
-                    lesson = os.path.splitext(os.path.basename(json_file))[0]
-                    lesson = lesson.strip()
+                    lesson = os.path.splitext(os.path.basename(json_file))[0].strip()
+
+                    # Add lesson if it doesn't exist
                     if lesson not in learning_data[category]:
-                        learning_data[category][lesson] = {}
+                        learning_data[category][lesson.strip()] = {}
+
                     for topic in self.data.keys():
+                        topic = topic.strip()
+                        # Add topic if it doesn't exist
                         if topic not in learning_data[category][lesson]:
-                            topic = topic.strip()
                             learning_data[category][lesson][topic] = 0
 
+        # Save the updated learning data
         self.save_learning_data(learning_data)
 
     def save_learning_data(self, learning_data):
         """Save the learning data to file."""
         learning_data_file = "learning_data.json"
-        with open(learning_data_file, 'w') as f:
-            json.dump(learning_data, f, indent=4)
+        try:
+            with open(learning_data_file, 'w') as f:
+                json.dump(learning_data, f, indent=4)
+        except Exception as e:
+            print(f"Error saving learning data: {e}")
 
     def load_data(self, lesson, category_path):
         """Loads the selected JSON file's content from its category."""
@@ -605,7 +612,7 @@ def main():
 
         # List available categories (folders)
         categories = [folder for folder in os.listdir(quiz_master.learning_section_directory) if os.path.isdir(os.path.join(quiz_master.learning_section_directory, folder))]
-        quiz_master.print_red("Available categories:")
+        quiz_master.print_red("Available subjects:")
         selected_category = get_selection_from_list(categories, "Enter the category")
         quiz_master.current_category = selected_category  # Store the current category
         category_path = os.path.join(quiz_master.learning_section_directory, selected_category)

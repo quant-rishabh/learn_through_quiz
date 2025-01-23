@@ -1,8 +1,9 @@
 {
     "maths": {
         "addition": {
-            "single digit addition": 0,
-            "missing_number_addition": 0
+            "single digit addition ": 1,
+            "missing_number_addition": 0,
+            "single digit addition": 0
         }
     },
     "Speaking_English": {
@@ -23,7 +24,7 @@
             "basic 3": 0
         },
         "Present Simple Tense": {
-            "1. General Facts": 2,
+            "1. General Facts": 0,
             "2. Daily Activities / Habits": 0,
             "3. Scheduled Events (Future)": 0,
             "4. Instructions or Directions": 0,
